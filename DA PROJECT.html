@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio D.A PROJECT</title>
+    
+    <!-- Impor Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Impor Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Impor ikon (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Menggunakan font Inter sebagai font utama */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Efek transisi halus untuk semua elemen */
+        * {
+            transition: all 0.3s ease-in-out;
+        }
+        /* Latar belakang gradien halus */
+        body {
+            background-color: #f8fafc; /* Fallback */
+            background-image: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+        }
+        /* Gaya kustom untuk judul bagian */
+        .section-title {
+            border-left: 4px solid #4f46e5;
+            padding-left: 1rem;
+        }
+        /* Efek bayangan dan skala pada hover kartu proyek */
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        /* Gaya untuk galeri grid di dalam kartu */
+        .gallery-grid img {
+            transition: transform 0.2s ease-in-out;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo Lokal dengan Path yang Diperbaiki -->
+            <img src="./images/logo.png.png" alt="D.A PROJECT Logo" class="h-16" onerror="this.onerror=null; this.src='https://placehold.co/200x50/1e293b/ffffff?text=D.A+PROJECT';">
+            
+            <nav class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                <a href="#about" class="hover:text-indigo-600">Tentang Kami</a>
+                <a href="#projects" class="hover:text-indigo-600">Proyek</a>
+                <a href="#contact" class="hover:text-indigo-600">Kontak</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Bagian Hero -->
+    <section class="py-20 md:py-32 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">Membangun Visi Anda,</h1>
+            <h2 class="text-4xl md:text-6xl font-bold text-indigo-600 leading-tight mb-4">Menciptakan Realita.</h2>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">Spesialis dalam konstruksi berkualitas tinggi dan desain inovatif untuk proyek residensial dan komersial.</p>
+            <a href="#projects" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 shadow-lg transform hover:scale-105">Lihat Proyek Kami</a>
+        </div>
+    </section>
+
+    <!-- Bagian Tentang Kami -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+             <h2 class="text-3xl font-bold text-gray-900 mb-2 section-title">Tentang D.A PROJECT</h2>
+             <p class="text-gray-600 max-w-4xl">Kami adalah tim profesional yang berdedikasi untuk memberikan hasil konstruksi terbaik. Dengan pengalaman bertahun-tahun, kami menggabungkan keahlian, material berkualitas, dan manajemen proyek yang efisien untuk mewujudkan impian arsitektur klien kami.</p>
+        </div>
+    </section>
+
+    <!-- Bagian Proyek -->
+    <main id="projects" class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-10 section-title">Portofolio Proyek Kami</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <!-- Kartu Proyek 1: Adriane Kost dengan Galeri Grid -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden project-card md:col-span-2 lg:col-span-3">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <!-- Galeri Gambar Grid -->
+                    <div class="p-4">
+                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 gallery-grid">
+                            <img src="./images/adriane-1.jpg.jpg" alt="Foto Proyek Adriane Kost 1" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/adriane-2.jpg.jpg" alt="Foto Proyek Adriane Kost 2" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/adriane-3.jpg.jpg" alt="Foto Proyek Adriane Kost 3" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/adriane-4.jpg.jpg" alt="Foto Proyek Adriane Kost 4" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/adriane-5.jpg.jpg" alt="Foto Proyek Adriane Kost 5" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/adriane-6.jpg.jpg" alt="Foto Proyek Adriane Kost 6" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/adriane-7.jpg.jpg" alt="Foto Proyek Adriane Kost 7" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/adriane-8.jpg.jpg" alt="Foto Proyek Adriane Kost 8" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/adriane-9.jpg.jpg" alt="Foto Proyek Adriane Kost 9" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/adriane-10.jpg.jpg" alt="Foto Proyek Adriane Kost 10" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/adriane-11.jpg.jpg" alt="Foto Proyek Adriane Kost 11" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/adriane-12.jpg.jpg" alt="Foto Proyek Adriane Kost 12" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                        </div>
+                    </div>
+                    <!-- Deskripsi Proyek -->
+                    <div class="p-6 flex flex-col justify-center">
+                        <h3 class="text-3xl font-bold mb-3 text-gray-900">Adriane Kost</h3>
+                        <p class="text-gray-600 mb-6">Proyek pembangunan rumah kost modern dengan fasilitas lengkap untuk kenyamanan penghuni. Galeri di samping menampilkan berbagai sudut bangunan, dari eksterior hingga detail interior.</p>
+                        <div class="space-y-3 text-md">
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-map-marker-alt w-5 mr-3 text-indigo-500"></i>
+                                <span>Ciseke, Jatinangor</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-calendar-alt w-5 mr-3 text-indigo-500"></i>
+                                <span>2024 - 2025</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-clock w-5 mr-3 text-indigo-500"></i>
+                                <span>10 Bulan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kartu Proyek 2: Daniel House dengan Galeri Grid -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden project-card md:col-span-2 lg:col-span-3">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                     <!-- Deskripsi Proyek -->
+                     <div class="p-6 flex flex-col justify-center order-2 md:order-1">
+                        <h3 class="text-3xl font-bold mb-3 text-gray-900">Daniel House</h3>
+                        <p class="text-gray-600 mb-6">Desain dan pembangunan rumah tinggal modern dengan sentuhan industrial dan pencahayaan dramatis. Galeri ini menampilkan detail interior dan eksterior yang elegan.</p>
+                        <div class="space-y-3 text-md">
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-map-marker-alt w-5 mr-3 text-indigo-500"></i>
+                                <span>Kopo, Bandung</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-calendar-alt w-5 mr-3 text-indigo-500"></i>
+                                <span>2021</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-clock w-5 mr-3 text-indigo-500"></i>
+                                <span>8 Bulan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Galeri Gambar Grid (Diperbarui) -->
+                    <div class="p-4 order-1 md:order-2">
+                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 gallery-grid">
+                            <img src="./images/daniel-1.jpg.jpg" alt="Foto Proyek Daniel House 1" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/daniel-2.jpg.jpg" alt="Foto Proyek Daniel House 2" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/daniel-3.jpg.jpg" alt="Foto Proyek Daniel House 3" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/daniel-4.jpg.jpg" alt="Foto Proyek Daniel House 4" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/daniel-5.jpg.jpg" alt="Foto Proyek Daniel House 5" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/daniel-6.jpg.jpg" alt="Foto Proyek Daniel House 6" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/daniel-7.jpg.jpg" alt="Foto Proyek Daniel House 7" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/daniel-8.jpg.jpg" alt="Foto Proyek Daniel House 8" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/daniel-9.jpg.jpg" alt="Foto Proyek Daniel House 9" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/daniel-10.jpg.jpg" alt="Foto Proyek Daniel House 10" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/daniel-11.jpg.jpg" alt="Foto Proyek Daniel House 11" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/daniel-12.jpg.jpg" alt="Foto Proyek Daniel House 12" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kartu Proyek 3: Villa Jafarm's House dengan Galeri Grid -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden project-card md:col-span-2 lg:col-span-3">
+                 <div class="grid grid-cols-1 md:grid-cols-2">
+                    <!-- Galeri Gambar Grid -->
+                    <div class="p-4">
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 gallery-grid">
+                            <img src="./images/jafarm-1.jpg.jpg" alt="Foto Proyek Jafarm House 1" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/jafarm-2.jpg.jpg" alt="Foto Proyek Jafarm House 2" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/jafarm-3.jpg.jpg" alt="Foto Proyek Jafarm House 3" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/jafarm-4.jpg.jpg" alt="Foto Proyek Jafarm House 4" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/jafarm-5.jpg.jpg" alt="Foto Proyek Jafarm House 5" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/jafarm-6.jpg.jpg" alt="Foto Proyek Jafarm House 6" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/jafarm-7.jpg.jpg" alt="Foto Proyek Jafarm House 7" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/jafarm-8.jpg.jpg" alt="Foto Proyek Jafarm House 8" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/jafarm-9.jpg.jpg" alt="Foto Proyek Jafarm House 9" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                            <img src="./images/jafarm-10.jpg.jpg" alt="Foto Proyek Jafarm House 10" class="w-full h-40 object-cover rounded-md cursor-pointer" onclick="openModal(this.src)">
+                        </div>
+                    </div>
+                     <!-- Deskripsi Proyek -->
+                    <div class="p-6 flex flex-col justify-center">
+                        <h3 class="text-3xl font-bold mb-3 text-gray-900">Villa Jafarm's House</h3>
+                        <p class="text-gray-600 mb-6">Pembangunan villa pribadi yang menyatu dengan alam, menciptakan suasana tenang dan mewah di kawasan Lembang yang sejuk. Galeri ini menampilkan detail interior dan eksterior yang mewah.</p>
+                        <div class="space-y-3 text-md">
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-map-marker-alt w-5 mr-3 text-indigo-500"></i>
+                                <span>Cikole, Lembang</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-calendar-alt w-5 mr-3 text-indigo-500"></i>
+                                <span>2024</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-clock w-5 mr-3 text-indigo-500"></i>
+                                <span>6 Bulan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Bagian Kontak -->
+    <footer id="contact" class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">D.A PROJECT</h4>
+                    <p class="text-gray-400">Mewujudkan ruang impian Anda dengan kualitas dan integritas.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +62 822-1720-7007</li>
+                        <li><i class="fas fa-envelope mr-2"></i> dinanabdurahman007@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Bandung, Indonesia</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Ikuti Kami</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 D.A PROJECT. Semua Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal untuk Tampilan Gambar Penuh -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center p-4 z-50 hidden">
+        <div class="relative">
+            <button onclick="closeModal()" class="absolute -top-4 -right-4 text-white bg-gray-800 rounded-full w-10 h-10 text-2xl">&times;</button>
+            <img id="modalImage" src="" alt="Tampilan Penuh" class="max-w-full max-h-[90vh] rounded-lg">
+        </div>
+    </div>
+
+    <!-- Script untuk Modal -->
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+
+        function openModal(src) {
+            modalImage.src = src;
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        // Menutup modal saat mengklik di luar gambar
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
